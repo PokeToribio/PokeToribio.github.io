@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Wizard101</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Wordle Wizard101</h1>
+    <div id="container">
+        <div id="gameContainer">
+            <div id="previousAttemptsContainer">
+                <div id="previousAttempts"></div>
+            </div>
+            <div>
+                <h1 id="adivina">Adivina el personaje:</h1> 
+                <div id="word">??????</div>
+                <div id="feedback"></div>
+            </div>
+        </div>
+        <div id="inputContainer">
+            <label for="input">Escribe la palabra:</label>
+            <input type="text" id="input">
+            <button id="submit" onclick="checkGuess()">Submit</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
