@@ -92,11 +92,10 @@ function normalizeText(text) {
 }
 
 function updateGuess(guess) {
-    currentGuess = currentGuess.split("").map((letter, index) => {
-        return wordToGuess[index] === guess[index] ? guess[index] : (Math.random() < 0.5 ? letter : "?");
+    currentGuess = decryptWord(wordToGuess).split("").map((letter, index) => {
+        return guess[index] === letter ? letter : (guess[index] === currentGuess[index] ? currentGuess[index] : "?");
     }).join("");
 }
-
 function endGame() {
     isGameOver = true;
     // Deshabilitar el botón de submit al finalizar el juego
